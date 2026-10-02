@@ -1,0 +1,133 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    background-color: #e0e5ec; 
+}
+
+.calculadora {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+    width: 350px; 
+}
+.botao-num {
+    background-color: #1436a5;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.botao-op-ad {
+    background-color: #f07706;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.botao-op-sub {
+    background-color: #f07706;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.botao-op-mul{
+    background-color:  #f07706;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.botao-op-div {
+    background-color:  #f07706;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.botao-igual {
+    background-color: #27ae60;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 10px; 
+    font-family: Verdana;
+
+}
+
+.visor-calculadora {
+    width: 100%;           
+    height: 60px;         
+    background-color: #f3f4f6; 
+    color: #333;          
+    font-size: 2rem;       
+    text-align: right;     
+    padding: 10px;         
+    border: 2px solid #ccc;
+    border-radius: 8px;    
+    box-sizing: border-box; 
+    font-family: 'Courier New', Courier, monospace; 
+    margin-bottom: 20px;
+}
+
+.visor-calculadora:focus {
+    outline: none;
+    border-color: #888;
+}
+
+botoes-calculadora {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 8px; 
+    
+}
