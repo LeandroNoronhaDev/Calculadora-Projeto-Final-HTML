@@ -14,6 +14,7 @@ body {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   width: 350px;
 }
+
 .botao-num {
   background-color: #1436a5;
   border: none;
@@ -132,7 +133,7 @@ h1 {
   border-color: #888;
 }
 
-botoes-calculadora {
+.botoes-calculadora {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
