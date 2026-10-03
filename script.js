@@ -1,4 +1,5 @@
 const visor = document.getElementById('visor');
+const historico = document.getElementById('historico');
 
 function adicionarNumero(numero) {
     if (visor.value === '0') {
@@ -20,11 +21,14 @@ function adicionarOperacao(operador) {
 
 function limparVisor(button) {
     visor.value = '0';
+    historico.innerText = '';
 }
 
 function calcularResultado() {
     try {
         if (visor.value !== '') {
+            historico.innerText = visor.value;
+
             visor.value = eval(visor.value);
         }
     } catch (erro) {
@@ -32,19 +36,3 @@ function calcularResultado() {
     }
 }
 
-function adicionarOperacao(operador) {
-    // Se o usuário apertar um operador logo após o "=", a gente 
-    // desativa o "calculou" para ele continuar a conta com o resultado
-    if (calculou === true) {
-        calculou = false; 
-    }
-
-    const ultimoCaractere = visor.value.slice(-1);
-    
-    // ... o resto do seu código continua exatamente igual aqui para baixo
-    if (ultimoCaractere === '+' || ultimoCaractere === '-' || ultimoCaractere === '*' || ultimoCaractere === '/') {
-        visor.value = visor.value.slice(0, -1) + operador;
-    } else {
-        visor.value += operador;
-    }
-    }

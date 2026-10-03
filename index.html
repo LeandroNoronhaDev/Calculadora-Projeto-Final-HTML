@@ -4,18 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Meu Site</title>
+    <title>Calculadora</title>
   </head>
   <body>
     <div class="calculadora">
       <h1>Calculadora</h1>
-      <input
-        type="text"
-        id="visor"
-        class="visor-calculadora"
-        value="0"
-        readonly
-      />
+
+      <div class="area-visor">
+        <div id="historico"></div> 
+        <input type="text" id="visor" class="visor-calculadora" value="0" readonly>
+      </div>
       <br />
       <div class="botoes-calculadora">
         <button class="botao-num" onclick="adicionarNumero('7')">7</button>
@@ -33,11 +31,14 @@
         <button class="botao-num" onclick="adicionarNumero('3')">3</button>
         <button class="botao-op-ad" onclick="adicionarOperacao('+')">+</button>
 
-        <button class="botao-num" onclick="limparVisor(this)">C</button>
+        <button class="botao-limpar" onclick="limparVisor(this)">C</button>
         <button class="botao-num" onclick="adicionarNumero('0')">0</button>
         <button class="botao-num" onclick="adicionarNumero('.')">.</button>
         <button class="botao-op-div" onclick="adicionarOperacao('/')">÷</button>
 
+        <button class="botao-branco" ></button>
+        <button class="botao-branco" ></button>
+        <button class="botao-branco" ></button>
         <button class="botao-igual" onclick="calcularResultado()">=</button>
       </div>
     </div>
