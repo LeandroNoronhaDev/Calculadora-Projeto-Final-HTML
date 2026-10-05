@@ -1,177 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  padding: 16px;
   background-color: #e0e5ec;
 }
 
 .calculadora {
-  background-color: #ffffff;
-  padding: 40px;
+  width: min(360px, 100%);
+  padding: 24px;
   border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  width: 350px;
-}
-
-.botao-num {
-  background-color: #1436a5;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.botao-limpar {
-  background-color: rgb(221, 12, 12);
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.botao-op-ad {
-  background-color: #f07706;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.botao-op-sub {
-  background-color: #f07706;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.botao-op-mul {
-  background-color: #f07706;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.botao-op-div {
-  background-color: #f07706;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.botao-igual {
-  background-color: #27ae60;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.botao-branco {
-  background-color: transparent;
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: default;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-  text-align: center;
+  margin: 0 0 20px;
   color: #333;
-  margin-top: 10px;
-  font-family: Verdana;
+  font-family: Verdana, sans-serif;
+  text-align: center;
 }
 
 .area-visor {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-bottom: 10px;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f3f4f6;
 }
 
 #historico {
   width: 100%;
-  height: 60px;
-  background-color: #f3f4f6;
-  color: #333;
-  font-size: 35px;
+  min-height: 24px;
+  margin: 0;
+  color: #666;
+  font-family: "Courier New", monospace;
+  font-size: 1.2rem;
   text-align: right;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
-  margin-bottom: 0px;
 }
 
 .visor-calculadora {
   width: 100%;
-  height: 60px;
-  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
   color: #333;
-  font-size: 2rem;
+  font-family: "Courier New", monospace;
+  font-size: 2.2rem;
   text-align: right;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
-  margin-bottom: 20px;
-}
-
-.visor-calculadora:focus {
-  outline: none;
-  border-color: #888;
 }
 
 .botoes-calculadora {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
+}
+
+.botoes-calculadora button {
+  min-width: 0;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.botao-num {
+  background-color: #1436a5;
+}
+
+.botao-limpar {
+  background-color: #dd0c0c;
+}
+
+.botao-op-ad,
+.botao-op-sub,
+.botao-op-mul,
+.botao-op-div {
+  background-color: #f07706;
+}
+
+.botao-igual {
+  grid-column: 1 / -1;
+  background-color: #27ae60;
 }
