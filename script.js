@@ -44,22 +44,6 @@ function adicionarPercentual() {
     visor.value = visor.value.slice(0, -numeroAtual[0].length) + percentual;
 }
 
-function alternarSinal() {
-    const operandoAtual = visor.value.match(/([+\-*/])\s*(-?\d*\.?\d+)$/);
-
-    if (operandoAtual) {
-        const prefixo = visor.value.slice(0, operandoAtual.index) + operandoAtual[1];
-        const numero = Number(operandoAtual[2]) * -1;
-        visor.value = prefixo + (numero < 0 ? ` -${Math.abs(numero)}` : numero);
-        return;
-    }
-
-    const numero = Number(visor.value);
-    if (Number.isFinite(numero)) {
-        visor.value = String(numero * -1);
-    }
-}
-
 function calcularResultado() {
     try {
         if (visor.value !== '') {
