@@ -15,6 +15,11 @@
         <input type="text" id="visor" class="visor-calculadora" value="0" readonly>
       </div>
       <div class="botoes-calculadora">
+        <button class="botao-limpar" onclick="limparVisor(this)">C</button>
+        <button class="botao-apagar" type="button" onclick="apagarCasa()" aria-label="Apagar último caractere" title="Apagar último caractere">⌫</button>
+        <button class="botao-op-div" type="button" onclick="adicionarPercentual()">%</button>
+        <button class="botao-op-div" onclick="adicionarOperacao('/')">÷</button>
+
         <button class="botao-num" onclick="adicionarNumero('7')">7</button>
         <button class="botao-num" onclick="adicionarNumero('8')">8</button>
         <button class="botao-num" onclick="adicionarNumero('9')">9</button>
@@ -30,11 +35,8 @@
         <button class="botao-num" onclick="adicionarNumero('3')">3</button>
         <button class="botao-op-ad" onclick="adicionarOperacao('+')">+</button>
 
-        <button class="botao-limpar" onclick="limparVisor(this)">C</button>
-        <button class="botao-num" onclick="adicionarNumero('0')">0</button>
         <button class="botao-num" onclick="adicionarNumero('.')">.</button>
-        <button class="botao-op-div" onclick="adicionarOperacao('/')">÷</button>
-
+        <button class="botao-num" onclick="adicionarNumero('0')">0</button>
         <button class="botao-igual" onclick="calcularResultado()">=</button>
       </div>
     </div>
