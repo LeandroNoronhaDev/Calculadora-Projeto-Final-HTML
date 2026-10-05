@@ -2,6 +2,24 @@ const visor = document.getElementById('visor');
 const historico = document.getElementById('historico');
 
 function adicionarNumero(numero) {
+    if (numero === '.') {
+        const numeroAtual = visor.value.split(/[+\-*/]/).pop();
+
+        if (numeroAtual.includes('.')) {
+            return;
+        }
+
+        if (visor.value === '0') {
+            visor.value = '0.';
+            return;
+        }
+
+        if (numeroAtual === '') {
+            visor.value += '0.';
+            return;
+        }
+    }
+
     if (visor.value === '0') {
         visor.value = numero;
     } else {
